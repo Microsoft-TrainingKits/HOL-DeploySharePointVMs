@@ -282,7 +282,12 @@ In this task, you will create a SharePoint virtual machine from the Base Image y
 									-VMs $advm1 -DnsSettings $dns1 -VNetName $adVNET
 	````
 
-1. Once the provisioning proces finish, connect to the VM using Remote Desktop and verify if it was automatically joined to your existing domain.
+1. Once the provisioning proces finish, connect to the VM using Remote Desktop and verify if it was automatically joined to your existing domain. To do so, open server manager and verify that the machine is joined to the domain.
+
+	![VM joined to the domain](images/vm-joined-to-the-domain.png?raw=true "VM joined to the domain")
+
+	_VM joined to the domain_
+
 
 1. Repeat steps 9 to 11 but use _spvm2_ as the **$vmName**. This second VM will be used to create the SharePoint farm.
 
