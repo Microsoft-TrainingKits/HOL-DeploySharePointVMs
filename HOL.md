@@ -579,10 +579,10 @@ In this task, you will verify that the SharePoint Server was correctly configure
 
 ---
 
-
 <a name="Exercise3" />
 ### Exercise 3: Configuring Load Balancing ###
 
+<a name="Ex3Task1" />
 #### Task 1 - Adding load balancing endpoints in Windows Azure portal ####
 
 1. In the Windows Azure Portal click on the first virtual machine **SPVM1 | Endpoints | Add Endpoint** to open the endpoint create wizard.
