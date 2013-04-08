@@ -46,7 +46,7 @@ In this task, you will log on to the Windows Azure Portal and download the publi
 
 1.	**Save** the publish-settings file to your local file system.
 
-	![Downloading publish-settings file](images/downloading-publish-settings-file.png?raw=true 'Downloading publish-settings file')
+	![Downloading publish-settings file](Images/downloading-publish-settings-file.png?raw=true 'Downloading publish-settings file')
 
 	_Downloading publish-settings file_
 
@@ -139,38 +139,38 @@ In this task, you will create a Windows Server 2008 Virtual Machine using the Wi
 
 1. Click **NETWORKS** in the left pane. Select the desired **Virtual Network** and copy it's Affinity Group name. You will use this name later on to create the new Virtual Machine.
 
-	![Virtual Networks](images/virtual-networks.png?raw=true "Virtual Networks")
+	![Virtual Networks](Images/virtual-networks.png?raw=true "Virtual Networks")
 	
 	_Virtual Networks_
 
 1. Click the **NEW** link located at the bottom of the page.
 
-	![Creating a New VM](images/creating-a-new-vm4.png?raw=true "Creating a New VM")
+	![Creating a New VM](Images/creating-a-new-vm4.png?raw=true "Creating a New VM")
 
 	_Creating a New Virtual Machine_
 
 1. Click the **COMPUTE** link, **VIRUAL MACHINE**  and then select **FROM GALLERY** 
 
-	![New Virtual Machine from gallery](images/new-vm-from-gallery.png?raw=true "New VM from gallery")
+	![New Virtual Machine from gallery](Images/new-vm-from-gallery.png?raw=true "New VM from gallery")
 
 	_New Virtual Machine from gallery_
 
 1. In the **Virtual machine operating system selection** page, click **PLATFORM IMAGES** and then select **Windows Server 2008 R2 SP1** from the operating system's list. Then click **Next**.
 
-	![Virtual Machine Operating System Selection](images/vm-os-selection.png?raw=true "VM OS Selection")
+	![Virtual Machine Operating System Selection](Images/vm-os-selection.png?raw=true "VM OS Selection")
 	
 	_Virtual machine operating system selection_
 
 1. Leave the **version release date** with the default value. Set the virtual machine's name to _SPImage1_ and set a new password for the machine's Administrator by completing the **New Password** and **Confirm Password** fields. Then set the **Size** to _Small_ and click the **Next** button.
 
-	![New Virtual Machine Configuration](images/new-vm-configuration3.png?raw=true "New VM Configuration")
+	![New Virtual Machine Configuration](Images/new-vm-configuration3.png?raw=true "New VM Configuration")
 
 	_New virtual machine configuration_
 
 1. In the **Virtual machine mode** page, leave mode as _Standalone Virtual Machine_, set the **DNS Name** to _SPImage1_. Click the **Next** button to continue.
 
 
-	![Configuring the VM mode](images/configuring-the-vm-mode.png?raw=true "Configuring the VM mode")
+	![Configuring the VM mode](Images/configuring-the-vm-mode.png?raw=true "Configuring the VM mode")
 
 	_Configuring the virtual machine mode_
 
@@ -190,13 +190,13 @@ In this task, you will download and install SharePoint 2010 and its dependencies
 
 1. In the **Server Manager**, click **Configure IE ESC** within **Security Information** section.
 
-	![Internet Explorer Enhanced Security](images/internet-explorer-enhanced-security.png?raw=true)
+	![Internet Explorer Enhanced Security](Images/internet-explorer-enhanced-security.png?raw=true)
 		
 	_Internet Explorer Enhanced Security_
  
 1. In the **Internet explorer Enhanced Security** configuration, turn **off** the enhanced security for **Administrators** and click **OK**.
 
-	![Internet Explorer Enhanced Security(2)](images/internet-explorer-enhanced-security2.png?raw=true)
+	![Internet Explorer Enhanced Security(2)](Images/internet-explorer-enhanced-security2.png?raw=true)
 	 
 	_Internet Explorer Enhanced Security_
  
@@ -212,13 +212,13 @@ In this task, you will download and install SharePoint 2010 and its dependencies
 
 1. Click **Install software prerequisites** and follow the **Microsoft SharePoint 2010 Products Preparation Tool** wizard to install the required products and updates.
 
-	![SharePoint Server 2010 Installation Wizard](images/sharepoint-server-2010-installation-wizard.png?raw=true)
+	![SharePoint Server 2010 Installation Wizard](Images/sharepoint-server-2010-installation-wizard.png?raw=true)
 	 
 	_SharePoint Server 2010 Installation Wizard_
  
 1. Go back to **SharePoint Server 2010 Installation Wizard** and click **Install SharePoint Server** link.
 
-	![SharePoint Server 2010 Installation Wizard(2)](images/sharepoint-server-2010-installation-wizard2.png?raw=true)
+	![SharePoint Server 2010 Installation Wizard(2)](Images/sharepoint-server-2010-installation-wizard2.png?raw=true)
 	 
 	_SharePoint Server 2010 Installation Wizard_
  
@@ -228,26 +228,26 @@ In this task, you will download and install SharePoint 2010 and its dependencies
 	
 1. In the **Enter your Product Key** dialog, use the **product key** you received by email. Make sure you use the product key for **SharePoint Server 2010 for Internet Sites, standard** trial version.
 
-	![Microsoft SharePoint Server 2010 Trial](images/microsoft-sharepoint-server-2010-trial.png?raw=true)
+	![Microsoft SharePoint Server 2010 Trial](Images/microsoft-sharepoint-server-2010-trial.png?raw=true)
 	 
 	_Microsoft SharePoint Server 2010 Trial_
  
 1. Read and accept the License Terms and click **Continue**.
 1. In the **Choose the installation you want** page, click **Server Farm**.
 	 
-	![Microsoft SharePoint Server 2010 Trial(2)](images/microsoft-sharepoint-server-2010-trial2.png?raw=true)
+	![Microsoft SharePoint Server 2010 Trial(2)](Images/microsoft-sharepoint-server-2010-trial2.png?raw=true)
 
 	_Microsoft SharePoint Server 2010 Trial_ 
 
 1. In the **Server Type** page, select **Complete** option and then click **Install Now** to begin with the SharePoint Server 2010 installation.
 	 
-	![Microsoft SharePoint Server 2010 Trial(3)](images/microsoft-sharepoint-server-2010-trial3.png?raw=true)
+	![Microsoft SharePoint Server 2010 Trial(3)](Images/microsoft-sharepoint-server-2010-trial3.png?raw=true)
 	
 	_Microsoft SharePoint Server 2010 Trial_
  
 1. In the **Run Configuration Wizard** page, unselect the **Run the SharePoint Products Configuration Wizard now** check box and click **Close.**
 
-	![Microsoft SharePoint Server 2010 Trial(4)](images/microsoft-sharepoint-server-2010-trial4.png?raw=true)
+	![Microsoft SharePoint Server 2010 Trial(4)](Images/microsoft-sharepoint-server-2010-trial4.png?raw=true)
 	 
 	_Microsoft SharePoint Server 2010 Trial_
  
@@ -282,19 +282,19 @@ In this task, you will create an image based on the virtual machine you created 
 
 1. Now click **Capture** to create an image from it.
 
-	![Capture button](images/capture-button.png?raw=true "Capture button")
+	![Capture button](Images/capture-button.png?raw=true "Capture button")
 
 	_Capture virtual machine_
 
 1. In the **Capture** dialog, set the **Image Name** to _sp2010syspreped_,  and select the **I have run Sysprep on the virtual machine** check box.
 	 
-	![Capturing a virtual machine Image](images/capturing-a-vm-image.png?raw=true "Capturing a Virtual Machine Image")
+	![Capturing a virtual machine Image](Images/capturing-a-vm-image.png?raw=true "Capturing a Virtual Machine Image")
 	
 	_Capturing a Virtual Machine Image_ 
 
 1. Wait until the image is created before continue to the next task.
 	 
-	![Creating a Virtual Machine Image(3)](images/creating-a-virtual-machine-image3.png?raw=true)
+	![Creating a Virtual Machine Image(3)](Images/creating-a-virtual-machine-image3.png?raw=true)
 
 	_Creating a Virtual Machine Image_
 
@@ -380,7 +380,7 @@ In this task, you will create a SharePoint virtual machine from the Base Image y
 
 1. Once the provisioning proces finish, connect to the virtual machine using Remote Desktop and verify if it was automatically joined to your existing domain. To do so, open server manager and verify that the machine is joined to the domain.
 
-	![Virtual machine joined to the domain](images/vm-joined-to-the-domain.png?raw=true "Virtual machine joined to the domain")
+	![Virtual machine joined to the domain](Images/vm-joined-to-the-domain.png?raw=true "Virtual machine joined to the domain")
 
 	_Virtual machine joined to the domain_
 
@@ -408,7 +408,7 @@ In this task, you will configure the SharePoint virtual machine to create and co
 This second virtual machine will be used to create the SharePoint 
 1. In the **Connect to a server farm** page, select **Create a new server farm** option.
 	 
-	![Create a new server farm](images/create-a-new-server-farm.png?raw=true)
+	![Create a new server farm](Images/create-a-new-server-farm.png?raw=true)
 
 	_Create a new server farm_
  
@@ -426,13 +426,13 @@ This second virtual machine will be used to create the SharePoint
 	
 	1. **Password**: type the user’s password.
 
-		![Configuration Database Settings](images/configuration-database-settings.png?raw=true)
+		![Configuration Database Settings](Images/configuration-database-settings.png?raw=true)
 	 
 		_Configuration Database Settings_
  
 1. In the **Specify Farm Security Settings** page, type a phrase that meets the minimun requirements and click **Next** to continue.
 
-	![Farm Security Settings](images/farm-security-settings.png?raw=true)
+	![Farm Security Settings](Images/farm-security-settings.png?raw=true)
 	 
 	_Farm Security Settings_
  
@@ -440,13 +440,13 @@ This second virtual machine will be used to create the SharePoint
 
 1. In the **Configure SharePoint Central Administration Web Application** page, choose _NTLM_ as **Authentication provider** and click **Next**.
 
-	![Configure SharePoint Central Administration Web Application](images/configure-sharepoint-central-administration-w.png?raw=true)
+	![Configure SharePoint Central Administration Web Application](Images/configure-sharepoint-central-administration-w.png?raw=true)
 	 
 	_Configure SharePoint Central Administration Web Application_
 
 1. Review your configuration settings and click **Next**. Once the configuration settings are applied click **Finish**.
 
-	![Completing the SharePoint Products Configuration Wizard](images/completing-the-sharepoint-products-configurat2.png?raw=true)
+	![Completing the SharePoint Products Configuration Wizard](Images/completing-the-sharepoint-products-configurat2.png?raw=true)
 	 
 	_Completing the SharePoint Products Configuration Wizard_
  
@@ -454,19 +454,19 @@ This second virtual machine will be used to create the SharePoint
 
 1. In the **Central Administration** section, under **Application Management**, click **Manage web applications** link.
 
-	![SharePoint Central Administration](images/sharepoint-central-administration.png?raw=true)
+	![SharePoint Central Administration](Images/sharepoint-central-administration.png?raw=true)
 	 
 	_SharePoint Central Administration_
 
 1. On the top bar, click the **New** button.
 
-	![New Site](images/configure-sharepoint-new-site.png?raw=true)
+	![New Site](Images/configure-sharepoint-new-site.png?raw=true)
 	 
 	_Web Application Management_ 
 
 1. In the **Create New Web Application** dialog box, make sure the **port** is set to 80 and enable anonymous access.
 
-	![New Web Application](images/configure-sharepoint-new-web-application.png?raw=true)
+	![New Web Application](Images/configure-sharepoint-new-web-application.png?raw=true)
 	 
 	_Create New Web Application_ 
 
@@ -474,19 +474,19 @@ This second virtual machine will be used to create the SharePoint
 
 1. In the **Edit Authentication** dialog, locate **Anonymous Access** section and select **Enable anonymous access** check box.
 
-	![Edit Authentication](images/edit-authentication.png?raw=true)
+	![Edit Authentication](Images/edit-authentication.png?raw=true)
 	 
 	_Edit Authentication_
  
 1. Back in the **Web Application Management** page, in the **Web Applications** tab, click **Anonymous Policy**.
 
-	![Anonymous Policy](images/anonymous-policy.png?raw=true)
+	![Anonymous Policy](Images/anonymous-policy.png?raw=true)
 	 
 	_Anonymous Policy_
  
 1. In the **Anonymous Access Restrictions** dialog, locate **Permissions** section and select _None - No Policy_ as **Anonymous User Policy**.
 
-	![Anonymous Access Restrictions](images/anonymous-access-restrictions.png?raw=true)
+	![Anonymous Access Restrictions](Images/anonymous-access-restrictions.png?raw=true)
 	 
 	_Anonymous Access Restrictions_ 
 
@@ -498,7 +498,7 @@ This second virtual machine will be used to create the SharePoint
 
 1. Follow the **SharePoint Products Configuration Wizard**. In the **Connect to a server farm** page, select **Connect to an existing server farm** option.
 	  
-	![SharePoint Configuration Wizard](images/sharepoint-configuration-wizard.png?raw=true)
+	![SharePoint Configuration Wizard](Images/sharepoint-configuration-wizard.png?raw=true)
 
 	_SharePoint Configuration Wizard_
  
@@ -521,26 +521,26 @@ In this task, you will verify that the SharePoint Server was correctly configure
 
 1. Create a new Site Collection. To do this, click **Create Site Collection** link under **Application Management** section within **Central Administration** page.
 
-	![Application Management - Create Site Collections](images/application-management---create-site-collecti.png?raw=true)
+	![Application Management - Create Site Collections](Images/application-management---create-site-collecti.png?raw=true)
 	 
 	_Application Management - Create Site Collections_
  
 1. In the **Create Site Collection** page, type **Title** and **Description** for the site collection. In the **Web Site Address** section, select _/sites/_ from the dropdown list and enter _SPFWebApp_.
 
-	![Create Site Collection](images/create-site-collection.png?raw=true)
+	![Create Site Collection](Images/create-site-collection.png?raw=true)
 	 
 	_Create Site Collection_
  
 1. In the **Template Selection** section, switch to **Publishing** tab and select **Publishing Portal** template. Then complete the **Primary and Secondary Site Collection Administrators**, use _contoso\Administrator_.
 
-	![Create Site Collection(2)](images/create-site-collection2.png?raw=true)
+	![Create Site Collection(2)](Images/create-site-collection2.png?raw=true)
 	 
 	_Create Site Collection_
  
 1. Leave the **Quota Template** with the default value and click **OK** to create the new Site Collection.
 1. Once the Site Collection is ready, you will see a successfully created message. To test the site, click URL shown.
 
-	![Site Collection Created](images/site-collection-created.png?raw=true)
+	![Site Collection Created](Images/site-collection-created.png?raw=true)
 	 
 	_Site Collection Created_
  
@@ -549,19 +549,19 @@ In this task, you will verify that the SharePoint Server was correctly configure
  
 1. Once logged on, you will see a site like the following one.
 
-	![Site's Home Page](images/sites-home-page.png?raw=true)
+	![Site's Home Page](Images/sites-home-page.png?raw=true)
 	 
 	_Site’s Home Page_
 
 1. Once in the site click on **Site Actions** | **Site Permissions** and click on **Anonymous Access**.
 
-			![ConfigureAnonymous](images/configureanonymous.png?raw=true)
+			![ConfigureAnonymous](Images/configureanonymous.png?raw=true)
 
 	_Configuring anonymous access_
 
 1. Change settings to **Entire Web Site** and click **OK**.
 
-	![changeanonperms](images/changeanonperms.png?raw=true)
+	![changeanonperms](Images/changeanonperms.png?raw=true)
 
 1. Now, test the SharePoint Farm connecting to the second SharePoint VM (_SPVM2_). To do this, go back to the **Windows Azure Portal** and go to **Virtual Machines** section.
 
@@ -589,13 +589,13 @@ In this task, you will verify that the SharePoint Server was correctly configure
 
 	1. In the **Add endpoint to virtual machine** page, select **Add Endpoint** option and then click the **right arrow** to continue.
 
-		![add-endpoint](images/add-endpoint.png?raw=true)
+		![add-endpoint](Images/add-endpoint.png?raw=true)
 
 		_Selecting Add endpoint_
 
 	1. In the **Specify endpoint details** page, enter _web_ in the name field, select the **TCP** protocol, and enter _80_ in the public and private port field. Finally, click the arrow to confirm the endpoint creation.
 
-		![webendpoint](images/webendpoint.png?raw=true)
+		![webendpoint](Images/webendpoint.png?raw=true)
 
 		_Creating a web endpoint_
 
@@ -603,13 +603,13 @@ In this task, you will verify that the SharePoint Server was correctly configure
 
 	1. In the **Add endpoint to virtual machine** page, select **Load-balance traffic on an existing endpoint** option. Then, select **web** endpoint from the list and click the arrow to continue.
 
-		![Add load balancing endpoint wizard](images/add-load-balancing-endpoint-wizard.png?raw=true "Add load balancing endpoint wizard")
+		![Add load balancing endpoint wizard](Images/add-load-balancing-endpoint-wizard.png?raw=true "Add load balancing endpoint wizard")
 		
 		_Add load balancing endpoint wizard_
 
 	1. In the **Specify endpoint details** page, define the same settings as the previous endpoint. Enter a Name (e.g. web) and a private port (e.g. 80). Click the arrow to create the load balancing endpoint.
 
-		![Load balancing endpoint details](images/load-balancing-endpoint-details.png?raw=true "Load balancing endpoint details")
+		![Load balancing endpoint details](Images/load-balancing-endpoint-details.png?raw=true "Load balancing endpoint details")
 
 		_Load balancing endpoint details_
 
@@ -618,25 +618,25 @@ In this task, you will verify that the SharePoint Server was correctly configure
 
 1. To verify, select the endpoint in the list and click **Edit endpoint**. 
 
-	![Edit Endpoint](images/edit-endpoint.png?raw=true "Edit endpoint")
+	![Edit Endpoint](Images/edit-endpoint.png?raw=true "Edit endpoint")
 
 	_Edit Endpoint_
 
 1. Notice that both virtual machines are configured as load-balanced machines. If you enter to the first virtual machine and edit its web endpoint, it will show the same configuration.
 
-	![Edit endpoint details](images/edit-endpoint-details.png?raw=true "Edit endpoint details")
+	![Edit endpoint details](Images/edit-endpoint-details.png?raw=true "Edit endpoint details")
 
 	_Edit endpoint details_
 
 1. Enter SPVM1 dashboard and locate the quick glance section. Take note of the virtual machine DNS and IP.
 
-	![VM IP load balancing](images/vm-ip-load-balancing.png?raw=true "VM IP load balancing")
+	![VM IP load balancing](Images/vm-ip-load-balancing.png?raw=true "VM IP load balancing")
 
 	_Virtual machine IP load balancing_
 
 1. Now enter SPVM2 dashboard and locate the quick glance section. Notice that the both virtual machines have the same virtual IP address and URL. That means, the load balancing is transparent for the user when a web site is retrieved. Internally, Windows Azure will redirect the traffic to either SPVM1 or SPVM2 hosts.
 
-	![VM IP load balancing 2](images/vm-ip-load-balancing-2.png?raw=true "VM IP load balancing 2")
+	![VM IP load balancing 2](Images/vm-ip-load-balancing-2.png?raw=true "VM IP load balancing 2")
 
 	_Virtual machine IP load balancing 2_
 
