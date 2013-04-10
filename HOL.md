@@ -161,7 +161,7 @@ In this task, you will create a Windows Server 2008 Virtual Machine using the Wi
 	
 	_Virtual machine operating system selection_
 
-1. Leave the **version release date** with the default value. Set the virtual machine's name to _SPImage1_ and set a new password for the machine's Administrator by completing the **New Password** and **Confirm Password** fields. Then set the **Size** to _Small_ and click the **Next** button.
+1. Leave the **version release date** with the default value. Set the virtual machine's name to _SPImage1_ and set a new username and password for it by completing the **New User Name**, **New Password**, and **Confirm Password** fields. Then set the **Size** to _Small_ and click the **Next** button.
 
 	![New Virtual Machine Configuration](Images/new-vm-configuration3.png?raw=true "New VM Configuration")
 
@@ -184,7 +184,7 @@ In this task, you will download and install SharePoint 2010 and its dependencies
 
 1. In the **Windows Azure Portal**, within **Virtual Machines** section, select the _SPImage1_ virtual machine you created in Task 1, and click **Connect**.
 
-1. Download the remote desktop client. Click **Open** and log on using the Administrator's credentials you defined when creating the virtual machine.
+1. Download the remote desktop client. Click **Open** and log on using the credentials you defined when creating the virtual machine.
 
 1. Now, you need to download and install **SharePoint 2010**. In order to enable downloads from Internet Explorer you will need to update **Internet Explorer Enhanced Security Configuration**. In the virtual machine, open **Server Manager** from **Start | All Programs | Administrative Tools**.
 
@@ -538,7 +538,7 @@ In this task, you will verify that the SharePoint Server was correctly configure
 	_Create Site Collection_
  
 1. Leave the **Quota Template** with the default value and click **OK** to create the new Site Collection.
-1. Once the Site Collection is ready, you will see a successfully created message. To test the site, click URL shown.
+1. Once the Site Collection is ready, you will see a successfully created message. To test the site, click the URL shown.
 
 	![Site Collection Created](Images/site-collection-created.png?raw=true)
 	 
