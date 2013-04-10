@@ -137,7 +137,7 @@ In this task, you will create a Windows Server 2008 Virtual Machine using the Wi
 
 1. Navigate to <https://manage.windowsazure.com> using a web browser, and sign in using your Microsoft account.
 
-1. Click **NETWORKS** in the left pane. Select the desired **Virtual Network** and copy it's Affinity Group name. You will use this name later on to create the new Virtual Machine.
+1. Click **NETWORKS** in the left pane. Select the desired **Virtual Network** and copy its Affinity Group name. You will use this name later, to create the new Virtual Machine.
 
 	![Virtual Networks](Images/virtual-networks.png?raw=true "Virtual Networks")
 	
@@ -149,7 +149,7 @@ In this task, you will create a Windows Server 2008 Virtual Machine using the Wi
 
 	_Creating a New Virtual Machine_
 
-1. Click the **COMPUTE** link, **VIRUAL MACHINE**  and then select **FROM GALLERY** 
+1. Click the **COMPUTE** link, **VIRTUAL MACHINE**  and then select **FROM GALLERY** 
 
 	![New Virtual Machine from gallery](Images/new-vm-from-gallery.png?raw=true "New VM from gallery")
 
@@ -274,11 +274,11 @@ In this task, you will create an image based on the virtual machine you created 
 
 1. Wait until the **System Preparation Utility** finishes, it will shut down the virtual machine.
 
-1. If not already opened, navigate to <https://manage.windowsazure.com> using a web browser, and sign in using your Windows account.
+1. If it is not already opened, go to <https://manage.windowsazure.com> using a web browser, and sign in using your Windows account.
 
 1. Click **Virtual Machines** on the left panel menu.
 
-1. Select the Virtual Machine _SPImage1_ you created in Task 1 and click **Shutdown**. Wait until the virtual machine is stopped.
+1. Ensure that the _SPImage1_ virtual machine is stopped, before proceeding.
 
 1. Now click **Capture** to create an image from it.
 
@@ -378,7 +378,7 @@ In this task, you will create a SharePoint virtual machine from the Base Image y
 
 	>**Note**: Make sure the location specified matches the location of the storage account you've configured in the Getting Started section. Also make sure that the service name is available to create the dns of the virtual machine.
 
-1. Once the provisioning proces finish, connect to the virtual machine using Remote Desktop and verify if it was automatically joined to your existing domain. To do so, open server manager and verify that the machine is joined to the domain.
+1. Once the provisioning process finish, connect to the virtual machine using Remote Desktop and verify if it was automatically joined to your existing domain. To do so, open server manager and verify that the machine is joined to the domain.
 
 	![Virtual machine joined to the domain](Images/vm-joined-to-the-domain.png?raw=true "Virtual machine joined to the domain")
 
@@ -396,7 +396,7 @@ In this task, you will configure the SharePoint virtual machine to create and co
 
 1. If not already opened, navigate to <https://manage.windowsazure.com> using a web browser, and sign in using your Windows account.
 
-1. In the **Virtual Machines** section, select the first SharePoint VM (_SPVM1_) and click **Connect** to connect using **Remote Desktop Connection**.
+1. In the **Virtual Machines** section, select the first SharePoint VM (_SPVM1_) and click **Connect** to connect using **Remote Desktop**.
 
 1. Open the **SharePoint 2010 Products Configuration Wizard** from **Start | All Programs | Microsoft SharePoint 2010 Products**.
 
@@ -472,27 +472,27 @@ This second virtual machine will be used to create the SharePoint
 
 1. Once the creation finishes, click **Ok**.
 
-1. In the **Edit Authentication** dialog, locate **Anonymous Access** section and select **Enable anonymous access** check box.
+1. Click **Authentication Providers**, located in the **Web Applications** ribbon bar.
+
+1. In the **Authentication Providers** dialog, click the **Default** link.
+
+1. In the **Edit Authentication** dialog, locate the **Anonymous Access** section and select the **Enable anonymous access** check box.
 
 	![Edit Authentication](Images/edit-authentication.png?raw=true)
 	 
 	_Edit Authentication_
  
 1. Back in the **Web Application Management** page, in the **Web Applications** tab, click **Anonymous Policy**.
-
-	![Anonymous Policy](Images/anonymous-policy.png?raw=true)
-	 
-	_Anonymous Policy_
  
 1. In the **Anonymous Access Restrictions** dialog, locate **Permissions** section and select _None - No Policy_ as **Anonymous User Policy**.
 
-	![Anonymous Access Restrictions](Images/anonymous-access-restrictions.png?raw=true)
+	![Anonymous Policy](Images/anonymous-policy.png?raw=true)
 	 
 	_Anonymous Access Restrictions_ 
 
 1. Now, configure the second SharePoint virtual machine (_SPVM2_) to connect to the SharePoint farm you created in the previous steps. To do this, go back to the **Windows Azure Portal** and go to **Virtual Machines** section.
 
-1. Select the second SharePoint virtual machine (_SPVM2_) and click **Connect** to connect using **Remote Desktop Connection**.
+1. Select the second SharePoint virtual machine (_SPVM2_) and click **Connect** to connect using **Remote Desktop**.
 
 1. Open the **SharePoint 2010 Products Configuration Wizard** from **Start | All Programs | Microsoft SharePoint 2010 Products**.
 
@@ -525,7 +525,7 @@ In this task, you will verify that the SharePoint Server was correctly configure
 	 
 	_Application Management - Create Site Collections_
  
-1. In the **Create Site Collection** page, type **Title** and **Description** for the site collection. In the **Web Site Address** section, select _/sites/_ from the dropdown list and enter _SPFWebApp_.
+1. In the **Create Site Collection** page, type a **Title** and a **Description** for the site collection. In the **Web Site Address** section, select _/sites/_ from the dropdown list and enter _SPFWebApp_.
 
 	![Create Site Collection](Images/create-site-collection.png?raw=true)
 	 
@@ -553,15 +553,12 @@ In this task, you will verify that the SharePoint Server was correctly configure
 	 
 	_Site’s Home Page_
 
-1. Once in the site click on **Site Actions** | **Site Permissions** and click on **Anonymous Access**.
-
-			![ConfigureAnonymous](Images/configureanonymous.png?raw=true)
-
-	_Configuring anonymous access_
+1. Once in the site click **Site Actions** | **Site Permissions** and click **Anonymous Access**.
 
 1. Change settings to **Entire Web Site** and click **OK**.
+	![ConfigureAnonymous](Images/configureanonymous.png?raw=true)
 
-	![changeanonperms](Images/changeanonperms.png?raw=true)
+	_Configuring anonymous access_
 
 1. Now, test the SharePoint Farm connecting to the second SharePoint VM (_SPVM2_). To do this, go back to the **Windows Azure Portal** and go to **Virtual Machines** section.
 
@@ -572,6 +569,13 @@ In this task, you will verify that the SharePoint Server was correctly configure
 1. In the **Central Administration** page, click **Manage Web Applications** under **Application Management**.
 
 1. In the **Web Application** page, select the web application and click **Extend**.
+
+1. In the **Extend Web Application to Another IIS Web Site** dialog, set the **Port** to _80_, and the **Host Header** to the service DNS (e.g. _yourservice.cloudapp.net_ ) Lastly, allow Anonymous access, and click **Ok**.
+
+	![Extending Web Application](Images/extending-web-application.png?raw=true "Extending Web Application")
+
+	_Extending Web Application_
+
 
 1. Click **Application Management** in the left menu and then click **View all sites collections** link.
 
@@ -587,13 +591,13 @@ In this task, you will verify that the SharePoint Server was correctly configure
 
 1. In the Windows Azure Portal click on the first virtual machine **SPVM1 | Endpoints | Add Endpoint** to open the endpoint create wizard.
 
-	1. In the **Add endpoint to virtual machine** page, select **Add Endpoint** option and then click the **right arrow** to continue.
+	1. In the **Add endpoint to virtual machine** page, select the **Add Endpoint** option and then click the **right arrow** to continue.
 
 		![add-endpoint](Images/add-endpoint.png?raw=true)
 
-		_Selecting Add endpoint_
+		_Adding an endpoint_
 
-	1. In the **Specify endpoint details** page, enter _web_ in the name field, select the **TCP** protocol, and enter _80_ in the public and private port field. Finally, click the arrow to confirm the endpoint creation.
+	1. In the **Specify endpoint details** page, enter _webport_ in the name field, select the **TCP** protocol, and enter _80_ in the public and private port fields. Finally, click the arrow to confirm the endpoint creation.
 
 		![webendpoint](Images/webendpoint.png?raw=true)
 
@@ -601,13 +605,13 @@ In this task, you will verify that the SharePoint Server was correctly configure
 
 1. Once the web endpoint is created in the first virtual machine, you will access the second virtual machine and add a load balancing endpoint. Enter the second virtual machine dashboard, click **Endpoints** link, and click **Add Endpoint** button on the bottom bar to start the endpoint creation wizard.
 
-	1. In the **Add endpoint to virtual machine** page, select **Load-balance traffic on an existing endpoint** option. Then, select **web** endpoint from the list and click the arrow to continue.
+	1. In the **Add endpoint to virtual machine** page, select the **Load-balance traffic on an existing endpoint** option. Then, select the **webport** endpoint from the list and click the arrow to continue.
 
 		![Add load balancing endpoint wizard](Images/add-load-balancing-endpoint-wizard.png?raw=true "Add load balancing endpoint wizard")
 		
 		_Add load balancing endpoint wizard_
 
-	1. In the **Specify endpoint details** page, define the same settings as the previous endpoint. Enter a Name (e.g. web) and a private port (e.g. 80). Click the arrow to create the load balancing endpoint.
+	1. In the **Specify endpoint details** page, define the same settings as the previous endpoint. Enter a Name (e.g. webport) and a private port (e.g. 80). Click the arrow to create the load balancing endpoint.
 
 		![Load balancing endpoint details](Images/load-balancing-endpoint-details.png?raw=true "Load balancing endpoint details")
 
@@ -640,7 +644,7 @@ In this task, you will verify that the SharePoint Server was correctly configure
 
 	_Virtual machine IP load balancing 2_
 
-1. Finally, start a new browser session and browse to the virtual machine URL. 
+1. Finally, start a new browser session and browse to the virtual machine URL. The URL should look like _http://myservice.cloudapp.net/sites/SPFWebApp_
 
 ---
 
