@@ -13,7 +13,7 @@ In this hands-on lab you will learn how to create a SharePoint farm, connected w
 
 In this hands-on lab, you will learn how to:
 
-1. Use the Windows Azure Portal to create a Sharepoint Image
+1. Use the Windows Azure Portal to create a Sharepoint Image.
 1. Connect two virtual machines to the same cloud service for network connectivity.
 1. Create and Configure SharePoint Server Farm.
 
@@ -149,7 +149,7 @@ In this task, you will create a Windows Server 2008 Virtual Machine using the Wi
 
 	_Creating a New Virtual Machine_
 
-1. Click the **COMPUTE** link, **VIRTUAL MACHINE**  and then select **FROM GALLERY** 
+1. Click the **COMPUTE** link, **VIRTUAL MACHINE**  and then select **FROM GALLERY**.
 
 	![New Virtual Machine from gallery](Images/new-vm-from-gallery.png?raw=true "New VM from gallery")
 
@@ -167,13 +167,14 @@ In this task, you will create a Windows Server 2008 Virtual Machine using the Wi
 
 	_New virtual machine configuration_
 
-1. In the **Virtual machine mode** page, leave mode as _Standalone Virtual Machine_, set the **DNS Name** to _SPImage1_. Click the **Next** button to continue.
+1. In the **Virtual machine mode** page, leave mode as _Standalone Virtual Machine_, set the **DNS Name** to _SPImage1_. Update the **Region/Affinity Group/Virtual Network** with the same affinity group name copied before. Click the **Next** button to continue.
 
 
 	![Configuring the VM mode](Images/configuring-the-vm-mode.png?raw=true "Configuring the VM mode")
 
 	_Configuring the virtual machine mode_
 
+1. Leave the **Virtual machine options** with the default values and finish the wizard.
  
 1. In the Virtual Machines section, you will see the Virtual Machine you created with a _provisioning_ status. Wait until it changes to _Running_ in order to continue with the following task.
 
@@ -200,7 +201,7 @@ In this task, you will download and install SharePoint 2010 and its dependencies
 	 
 	_Internet Explorer Enhanced Security_
  
-	>**Note:** Modifying **Internet Explorer Enhanced Security** configurations is not good practice and is only for the purpose of this particular lab. The correct approach should be to download the files locally and then copy them to a shared folder or directly to the virtual machine<http://sharepoint.microsoft.com/en-us/Pages/Try-It.aspx>.
+	>**Note:** Modifying **Internet Explorer Enhanced Security** configurations is not good practice and is only for the purpose of this particular lab. The correct approach should be to download the files locally and then copy them to a shared folder or directly to the virtual machine.
 
 1. Now that you have permissions to download files, open an **Internet Explorer** browser and browse to [http://technet.microsoft.com/en-us/evalcenter/ee388573.aspx](http://technet.microsoft.com/en-us/evalcenter/ee388573.aspx).
 
@@ -308,7 +309,7 @@ In this exercise, you will create a SharePoint Virtual Machine.
 <a name="Ex2Task1" />
 #### Task 1 - Create a SharePoint virtual machine from the SharePoint Base Image ####
 
-In this task, you will create a SharePoint virtual machine from the Base Image you created in the previous task using the **Windows Azure Portal**. You will latter use this virtual machine to configure the SharePoint Farm.
+In this task, you will create a SharePoint virtual machine from the base image you created in the previous task using the **Windows Azure Portal** and we will join it to the domain we created in Deploying Active Directory hands-on lab. You will later use this virtual machine to configure the SharePoint Farm.
 
 1. If you do not have the IP address of the Domain Controller Virtual Machine, Navigate to the **Windows Azure Portal** using a Web browser and sign in using the **Microsoft Account** associated with your Windows Azure account.
 
@@ -368,7 +369,7 @@ In this task, you will create a SharePoint virtual machine from the Base Image y
 1. Create a new Virtual Machine using the Domain and DNS settings you defined in the previous steps. Replace the placeholder with a unique Service Name.
 
 	````PowerShell
-	$serviceName = [YOUR-SERVICE-NAME]
+	$serviceName = '[YOUR-SERVICE-NAME]'
 	$affinityGroup = 'adag'
 	$adVNET = 'domainvnet'
 	# New Azure VM with VNET and DNS settings
