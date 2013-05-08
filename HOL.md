@@ -162,7 +162,7 @@ In this task, you will create a SharePoint virtual machine from an image using P
 	Get-AzureVMImage | Select ImageName
 	````
 
-	![Image Name list](images/image-name-list.png?raw=true "Image Name list")
+	![Image Name list](Images/image-name-list.png?raw=true "Image Name list")
 
 	_Image Name list_
 
@@ -314,7 +314,7 @@ In this task, you will configure the SharePoint virtual machine to create and a 
 
 1. Click **Authentication Providers**, located in the **Web Applications** ribbon bar.
 
-	![Authentication Providers](images/authentication-providers.png?raw=true "Authentication Providers")
+	![Authentication Providers](Images/authentication-providers.png?raw=true "Authentication Providers")
 
 	_Authentication Providers_
 
