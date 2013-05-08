@@ -133,183 +133,9 @@ Make sure you have this image created before starting with the lab.
 <a name="Ex1Task1" />
 #### Task 1 - Create a Windows Server virtual machine from the Windows Azure portal ####
 
-In this task, you will create a Windows Server 2008 Virtual Machine using the Windows Azure Management Portal. Then you will use this virtual machine to install SharePoint and generate a reusable image.
+In this task, you will create a SharePoint virtual machine from an image using PowerShell and we will join it to the domain we created in Deploying Active Directory hands-on lab. You will later use this virtual machine to configure the SharePoint Farm.
 
-1. Navigate to <https://manage.windowsazure.com> using a web browser, and sign in using your Microsoft account.
-
-1. Click **NETWORKS** in the left pane. Select the desired **Virtual Network** and copy its Affinity Group name. You will use this name later, to create the new Virtual Machine.
-
-	![Virtual Networks](Images/virtual-networks.png?raw=true "Virtual Networks")
-	
-	_Virtual Networks_
-
-1. Click the **NEW** link located at the bottom of the page.
-
-	![Creating a New VM](Images/creating-a-new-vm4.png?raw=true "Creating a New VM")
-
-	_Creating a New Virtual Machine_
-
-1. Click the **COMPUTE** link, **VIRTUAL MACHINE**  and then select **FROM GALLERY**.
-
-	![New Virtual Machine from gallery](Images/new-vm-from-gallery.png?raw=true "New VM from gallery")
-
-	_New Virtual Machine from gallery_
-
-1. In the **Virtual machine operating system selection** page, click **PLATFORM IMAGES** and then select **Windows Server 2008 R2 SP1** from the operating system's list. Then click **Next**.
-
-	![Virtual Machine Operating System Selection](Images/vm-os-selection.png?raw=true "VM OS Selection")
-	
-	_Virtual machine operating system selection_
-
-1. Leave the **version release date** with the default value. Set the virtual machine's name to _SPImage1_ and set a new username and password for it by completing the **New User Name**, **New Password**, and **Confirm Password** fields. Then set the **Size** to _Small_ and click the **Next** button.
-
-	![New Virtual Machine Configuration](Images/new-vm-configuration3.png?raw=true "New VM Configuration")
-
-	_New virtual machine configuration_
-
-1. In the **Virtual machine mode** page, leave mode as _Standalone Virtual Machine_, set the **DNS Name** to _SPImage1_. Update the **Region/Affinity Group/Virtual Network** with the same affinity group name copied before. Click the **Next** button to continue.
-
-
-	![Configuring the VM mode](Images/configuring-the-vm-mode.png?raw=true "Configuring the VM mode")
-
-	_Configuring the virtual machine mode_
-
-1. Leave the **Virtual machine options** with the default values and finish the wizard.
- 
-1. In the Virtual Machines section, you will see the Virtual Machine you created with a _provisioning_ status. Wait until it changes to _Running_ in order to continue with the following task.
-
-<a name="Ex1Task2" />
-#### Task 2 - Install SharePoint and Dependencies ####
-
-In this task, you will download and install SharePoint 2010 and its dependencies.
-
-1. In the **Windows Azure Portal**, within **Virtual Machines** section, select the _SPImage1_ virtual machine you created in Task 1, and click **Connect**.
-
-1. Download the remote desktop client. Click **Open** and log on using the credentials you defined when creating the virtual machine.
-
-1. Now, you need to download and install **SharePoint 2010**. In order to enable downloads from Internet Explorer you will need to update **Internet Explorer Enhanced Security Configuration**. In the virtual machine, open **Server Manager** from **Start | All Programs | Administrative Tools**.
-
-1. In the **Server Manager**, click **Configure IE ESC** within **Security Information** section.
-
-	![Internet Explorer Enhanced Security](Images/internet-explorer-enhanced-security.png?raw=true)
-		
-	_Internet Explorer Enhanced Security_
- 
-1. In the **Internet explorer Enhanced Security** configuration, turn **off** the enhanced security for **Administrators** and click **OK**.
-
-	![Internet Explorer Enhanced Security(2)](Images/internet-explorer-enhanced-security2.png?raw=true)
-	 
-	_Internet Explorer Enhanced Security_
- 
-	>**Note:** Modifying **Internet Explorer Enhanced Security** configurations is not good practice and is only for the purpose of this particular lab. The correct approach should be to download the files locally and then copy them to a shared folder or directly to the virtual machine.
-
-1. Now that you have permissions to download files, open an **Internet Explorer** browser and browse to [http://technet.microsoft.com/en-us/evalcenter/ee388573.aspx](http://technet.microsoft.com/en-us/evalcenter/ee388573.aspx).
-
-1. Select **SharePoint Server for Internet Sites, Standard** version from the dropdown list and click **Get Started Now**.
-
-1. Sign in with your **Windows Live ID** account and complete the **SharePoint Server 2010 for Internet Sites, Standard Trial** download. You will receive an email with the product key for your trial version.
-
-1. Once the download is completed, double-click the downloaded **SharePointServer.exe** file.
-
-1. Click **Install software prerequisites** and follow the **Microsoft SharePoint 2010 Products Preparation Tool** wizard to install the required products and updates.
-
-	![SharePoint Server 2010 Installation Wizard](Images/sharepoint-server-2010-installation-wizard.png?raw=true)
-	 
-	_SharePoint Server 2010 Installation Wizard_
- 
-1. Go back to **SharePoint Server 2010 Installation Wizard** and click **Install SharePoint Server** link.
-
-	![SharePoint Server 2010 Installation Wizard(2)](Images/sharepoint-server-2010-installation-wizard2.png?raw=true)
-	 
-	_SharePoint Server 2010 Installation Wizard_
- 
-	>**Note:** You might need to restart the virtual machine before installing the SharePoint Server. If the SharePoint Server installation instructs you to restart the computer, do so now.
-	
-	>After the system restarts, open the SharePoint installer and continue with the steps.
-	
-1. In the **Enter your Product Key** dialog, use the **product key** you received by email. Make sure you use the product key for **SharePoint Server 2010 for Internet Sites, standard** trial version.
-
-	![Microsoft SharePoint Server 2010 Trial](Images/microsoft-sharepoint-server-2010-trial.png?raw=true)
-	 
-	_Microsoft SharePoint Server 2010 Trial_
- 
-1. Read and accept the License Terms and click **Continue**.
-1. In the **Choose the installation you want** page, click **Server Farm**.
-	 
-	![Microsoft SharePoint Server 2010 Trial(2)](Images/microsoft-sharepoint-server-2010-trial2.png?raw=true)
-
-	_Microsoft SharePoint Server 2010 Trial_ 
-
-1. In the **Server Type** page, select **Complete** option and then click **Install Now** to begin with the SharePoint Server 2010 installation.
-	 
-	![Microsoft SharePoint Server 2010 Trial(3)](Images/microsoft-sharepoint-server-2010-trial3.png?raw=true)
-	
-	_Microsoft SharePoint Server 2010 Trial_
- 
-1. In the **Run Configuration Wizard** page, unselect the **Run the SharePoint Products Configuration Wizard now** check box and click **Close.**
-
-	![Microsoft SharePoint Server 2010 Trial(4)](Images/microsoft-sharepoint-server-2010-trial4.png?raw=true)
-	 
-	_Microsoft SharePoint Server 2010 Trial_
- 
-1. Click **Exit** to close the SharePoint Server installation wizard.
-
-1. Go to [http://www.microsoft.com/download/en/details.aspx?id=26623](http://www.microsoft.com/download/en/details.aspx?id=26623), download the **Service Pack 1 for SharePoint Server 2010** and Install it.
-
-	>**Note:** The Service Pack 1 is required to install SharePoint with SQL Server 2012.
-
-<a name="Ex1Task3" />
-#### Task 3 - Capture the virtual machine and generate an image ####
-
-In this task, you will create an image based on the virtual machine you created in the previous tasks. Then you will reuse that image for creating a SharePoint Virtual Machine.
-
-1. In the Virtual Machine, open the **Command Prompt** from **Start | All Programs | Accessories** as Administrator.
-1. You will now run **Sysprep** tool to prepare the virtual machine for duplication. You have to run **Sysprep** if you want to capture an image of an existing virtual machine and reuse it for creating new ones.
-	
-	<!--mark: 1-->
-	````Script
-	%WINDIR%\system32\sysprep\sysprep.exe /oobe /generalize /shutdown
-	```` 
-	
-	>**Note:** System Preparation Utility (Sysprep) is the Tool that Microsoft provides for preparing a Windows Installation for duplication, auditing and customer delivery. For more information about Sysprep tool, refer to this TechNet article: [http://technet.microsoft.com/en-us/library/cc721940(WS.10).aspx](http://technet.microsoft.com/en-us/library/cc721940(WS.10\).aspx).
-
-1. Wait until the **System Preparation Utility** finishes, it will shut down the virtual machine.
-
-1. If it is not already opened, go to <https://manage.windowsazure.com> using a web browser, and sign in using your Windows account.
-
-1. Click **Virtual Machines** on the left panel menu.
-
-1. Ensure that the _SPImage1_ virtual machine is stopped, before proceeding.
-
-1. Now click **Capture** to create an image from it.
-
-	![Capture button](Images/capture-button.png?raw=true "Capture button")
-
-	_Capture virtual machine_
-
-1. In the **Capture** dialog, set the **Image Name** to _sp2010syspreped_,  and select the **I have run Sysprep on the virtual machine** check box.
-	 
-	![Capturing a virtual machine Image](Images/capturing-a-vm-image.png?raw=true "Capturing a Virtual Machine Image")
-	
-	_Capturing a Virtual Machine Image_ 
-
-1. Wait until the image is created before continue to the next task.
-	 
-	![Creating a Virtual Machine Image(3)](Images/creating-a-virtual-machine-image3.png?raw=true)
-
-	_Creating a Virtual Machine Image_
-
----
-
-<a name="Exercise2" />
-### Exercise 2: Create a SharePoint Virtual Machine ###
-
-In this exercise, you will create a SharePoint Virtual Machine.
-	
-<a name="Ex2Task1" />
-#### Task 1 - Create a SharePoint virtual machine from the SharePoint Base Image ####
-
-In this task, you will create a SharePoint virtual machine from the base image you created in the previous task using the **Windows Azure Portal** and we will join it to the domain we created in Deploying Active Directory hands-on lab. You will later use this virtual machine to configure the SharePoint Farm.
+1. Navigate to the [Windows Azure Management Portal](https://manage.windowsazure.com) using a web browser, and sign in using your Microsoft account.
 
 1. If you do not have the IP address of the Domain Controller Virtual Machine, Navigate to the **Windows Azure Portal** using a Web browser and sign in using the **Microsoft Account** associated with your Windows Azure account.
 
@@ -317,7 +143,15 @@ In this task, you will create a SharePoint virtual machine from the base image y
 
 1. In the virtual machine, go to **Start**, type **cmd** and press **ENTER**.
 
-1. Type **ipconfig** and press **ENTER**. Take note of the **IPv4 address**, you will use it later on this exercise. Close the **Remote Desktop** connection.
+1. Type **ipconfig** and press **ENTER**. Take note of the **IPv4 address**, you will use it later on this exercise. 
+
+1. Close the **Remote Desktop** connection.
+
+1. Click **NETWORKS** in the left pane. Select the desired **Virtual Network** and copy its Affinity Group name. You will use this name later, to create the new Virtual Machine.
+
+	![Virtual Networks](Images/virtual-networks.png?raw=true "Virtual Networks")
+	
+	_Virtual Networks_	
 
 1. Open **Windows Azure PowerShell** from **Start** | **All Programs** | **Windows Azure** | **Windows Azure PowerShell**, right-click **Windows Azure Powershell** and choose **Run as Administrator**.
 
@@ -328,16 +162,18 @@ In this task, you will create a SharePoint virtual machine from the base image y
 	Get-AzureVMImage | Select ImageName
 	````
 
-1. Execute the following command to define the OS disk image name for the new Virtual Machine.
+	![Image Name list](images/image-name-list.png?raw=true "Image Name list")
+
+	_Image Name list_
+
+1. Copy the SharePoint Image name and execute the following command to define the Operating System disk image name for the new Virtual Machine. In this case we are going to use _c6e0f177abd8496e934234bd27f46c5d__SharePoint-2013-Trial-4-13-2013_ but it may defer when running the Lab.
 	
-	<!-- mark:1 -->
 	````PowerShell
-	$imgName = '[SHAREPOINT-IMAGE-NAME]'
+	$imgName = 'c6e0f177abd8496e934234bd27f46c5d__SharePoint-2013-Trial-4-13-2013'
 	````
 
-1. Set up the virtual machine's DNS settings. To do this, you will use the Virtual Machine you created in Exercise 1 were you configured the Active Directory. Replece the placeholders before executing the following command. Use the IP address you took note at the beginning of the exercise.
+1. Set up the virtual machine's DNS settings. To do this, you will use the Virtual Machine you created in _Deploying Active Directory_ HOL. Replace the placeholders before executing the following command. Use the IP address you took note at the beginning of the exercise.
 	
-	<!-- mark:1-4 -->
 	````PowerShell
 	$advmIP = '[AD-IP-ADDRESS]'
 	$advmName = '[AD-VM-NAME]'
@@ -345,20 +181,25 @@ In this task, you will create a SharePoint virtual machine from the base image y
 	$dns1 = New-AzureDns -Name $advmName -IPAddress $advmIP
 	````
 
+1. Set up the two virtual machine's configuration settings to automatically join the domain in the provisioning process. Before executing the command, replace the placeholders with the administrator and domain passwords.
 
-1. Set up the new virtual machine's configuration settings to automatically join the domain in the provisioning process. Before executing the command, replace the placeholders with the administrator and domain passwords.
-
-	<!-- mark:1-12 -->
 	````PowerShell
-	$vmName = 'spvm1'
+	$vmName1 = 'spvm1'
+	$vmName2 = 'spvm2'
+	$adminUserName = '[ADMIN-USER-NAME]'
 	$adminPassword = '[YOUR-PASSWORD]'
 	$domainPassword = '[YOUR-PASSWORD]'
 	$domainUser = 'administrator'
 	$FQDomainName = 'contoso.com'
 	$subNet = 'Subnet-1'
 	# Configuring VM to Automatically Join Domain
-	$advm1 = New-AzureVMConfig -Name $vmName -InstanceSize Small -ImageName $imgName | 
-				Add-AzureProvisioningConfig -WindowsDomain -Password $adminPassword `
+	$spvm1 = New-AzureVMConfig -Name $vmName1 -InstanceSize Small -ImageName $imgName | 
+				Add-AzureProvisioningConfig -WindowsDomain -AdminUserName $adminUserName -Password $adminPassword `
+				-Domain 'contoso' -DomainPassword $domainPassword `
+				-DomainUserName $domainUser -JoinDomain $FQDomainName |
+		 Set-AzureSubnet -SubnetNames $subNet
+	$spvm2 = New-AzureVMConfig -Name $vmName2 -InstanceSize Small -ImageName $imgName | 
+				Add-AzureProvisioningConfig -WindowsDomain -AdminUserName $adminUserName -Password $adminPassword `
 				-Domain 'contoso' -DomainPassword $domainPassword `
 				-DomainUserName $domainUser -JoinDomain $FQDomainName |
 		 Set-AzureSubnet -SubnetNames $subNet
@@ -366,7 +207,7 @@ In this task, you will create a SharePoint virtual machine from the base image y
 
 	>**Note:** The previous command asumes that you used the proposed names for the Domain Name and the Subnets that are shown in the **Deploying Active Directory** hands on lab. You may need to update the values if you used different names.
 
-1. Create a new Virtual Machine using the Domain and DNS settings you defined in the previous steps. Replace the placeholder with a unique Service Name.
+1. Create two Virtual Machine using the Domain and DNS settings you defined in the previous steps. Replace the placeholder with a unique Service Name.
 
 	````PowerShell
 	$serviceName = '[YOUR-SERVICE-NAME]'
@@ -374,7 +215,7 @@ In this task, you will create a SharePoint virtual machine from the base image y
 	$adVNET = 'domainvnet'
 	# New Azure VM with VNET and DNS settings
 	New-AzureVM –ServiceName $serviceName -AffinityGroup $affinityGroup `
-									-VMs $advm1 -DnsSettings $dns1 -VNetName $adVNET
+									-VMs $spvm1, $spvm2 -DnsSettings $dns1 -VNetName $adVNET
 	````
 
 	>**Note**: Make sure the location specified matches the location of the storage account you've configured in the Getting Started section. Also make sure that the service name is available to create the dns of the virtual machine.
@@ -385,28 +226,26 @@ In this task, you will create a SharePoint virtual machine from the base image y
 
 	_Virtual machine joined to the domain_
 
+---
 
-1. Repeat steps 9 to 11 but use _spvm2_ as the **$vmName** and remove the _-affinitygroup_ option from **New-AzureVM** command. This second virtual machine will be used to create the SharePoint farm.
+<a name="Exercise2" />
+### Exercise 2: Configuring a SharePoint Virtual Machine ###
 
-	>**Note**: Leave the rest of the configuration with the same values
+<a name="Ex2Task1" />
+#### Task 1 - Creating a new Farm in SharePoint####
 
-<a name="Ex2Task2" />
-#### Task 2 - Configure SharePoint ####
+In this task, you will configure the SharePoint virtual machine to create and a SharePoint Farm. 
 
-In this task, you will configure the SharePoint virtual machine to create and connect to the SharePoint Farm. 
+1. If not already opened, navigate to the [Windows Azure Management Portal](https://manage.windowsazure.com)  using a web browser, and sign in using your Windows account.
 
-1. If not already opened, navigate to <https://manage.windowsazure.com> using a web browser, and sign in using your Windows account.
+1. In the **Virtual Machines** section, select the first SharePoint Virtual Machine ( _spvm1_ ) and click **Connect** to connect using **Remote Desktop**.
 
-1. In the **Virtual Machines** section, select the first SharePoint VM (_SPVM1_) and click **Connect** to connect using **Remote Desktop**.
-
-1. Open the **SharePoint 2010 Products Configuration Wizard** from **Start | All Programs | Microsoft SharePoint 2010 Products**.
-
-1. Follow the **SharePoint 2010 Products Configuration Wizard**. 
+1. Open the **SharePoint 2013 Products Configuration Wizard** .
 
 1. In the **Welcome to SharePoint Products** screen click next.
 
-	>**Note**: If prompt that some services might restart during installation, click **Yes**
-This second virtual machine will be used to create the SharePoint 
+	>**Note**: If prompt that some services might restart during installation, click **Yes**. This second virtual machine will be used to create the SharePoint 
+
 1. In the **Connect to a server farm** page, select **Create a new server farm** option.
 	 
 	![Create a new server farm](Images/create-a-new-server-farm.png?raw=true)
@@ -415,7 +254,7 @@ This second virtual machine will be used to create the SharePoint
  
 1. In the **Specify Configuration Database Settings** page, complete the fields with the following information and click **Next**.
 
-	1. **Database Server**: type the name of the computer where you installed SQL Server.
+	1. **Database Server**: type the name of the computer where you installed SQL Server followed by _.contoso.com_
 	
 	1. **Database name**: type the name for your SharePoint configuration database. The default name is _SharePoint_Config_.
 
@@ -451,7 +290,7 @@ This second virtual machine will be used to create the SharePoint
 	 
 	_Completing the SharePoint Products Configuration Wizard_
  
-1. Now, you will enable Anonymous Access in your SharePoint Server. To do this, open **SharePoint Central Administration** from **Start | All Programs | Microsoft SharePoint 2010 Products**.
+1. Now, you will enable Anonymous Access in your SharePoint Server. To do this, open **SharePoint Central Administration**.
 
 1. In the **Central Administration** section, under **Application Management**, click **Manage web applications** link.
 
@@ -465,15 +304,19 @@ This second virtual machine will be used to create the SharePoint
 	 
 	_Web Application Management_ 
 
-1. In the **Create New Web Application** dialog box, make sure the **port** is set to 80 and enable anonymous access.
+1. In the **Create New Web Application** dialog box, make sure the **port** is set to _80_ and enable anonymous access. Click **Ok**. to create the web application.
 
 	![New Web Application](Images/configure-sharepoint-new-web-application.png?raw=true)
 	 
 	_Create New Web Application_ 
 
-1. Once the creation finishes, click **Ok**.
+1. Click **OK** once the Web Application is created.
 
 1. Click **Authentication Providers**, located in the **Web Applications** ribbon bar.
+
+	![Authentication Providers](images/authentication-providers.png?raw=true "Authentication Providers")
+
+	_Authentication Providers_
 
 1. In the **Authentication Providers** dialog, click the **Default** link.
 
@@ -491,11 +334,15 @@ This second virtual machine will be used to create the SharePoint
 	 
 	_Anonymous Access Restrictions_ 
 
-1. Now, configure the second SharePoint virtual machine (_SPVM2_) to connect to the SharePoint farm you created in the previous steps. To do this, go back to the **Windows Azure Portal** and go to **Virtual Machines** section.
+<a name="Ex2Task2" />
+### Task 2 - Configure SharePoint to connect to the Farm ###
+In this task, you will configure the SharePoint virtual machine to  connect to the SharePoint Farm. 
 
-1. Select the second SharePoint virtual machine (_SPVM2_) and click **Connect** to connect using **Remote Desktop**.
+1. Go back to the **Windows Azure Portal** and go to **Virtual Machines** section.
 
-1. Open the **SharePoint 2010 Products Configuration Wizard** from **Start | All Programs | Microsoft SharePoint 2010 Products**.
+1. Select the second SharePoint virtual machine ( _spvm2_ ) and click **Connect** to connect using **Remote Desktop**.
+
+1. Open the **SharePoint 2013 Products Configuration Wizard**.
 
 1. Follow the **SharePoint Products Configuration Wizard**. In the **Connect to a server farm** page, select **Connect to an existing server farm** option.
 	  
@@ -516,9 +363,9 @@ This second virtual machine will be used to create the SharePoint
 
 In this task, you will verify that the SharePoint Server was correctly configured by creating a new SharePoint Site Collection.
 
-1. If not already connected, connect to the first SharePoint virtual machine (_SPVM1_) using **Remote Desktop Connection**.
+1. If not already connected, connect to the first SharePoint virtual machine ( _spvm1_ ) using **Remote Desktop Connection**.
 
-1. Open **SharePoint 2010 Products Central Administrator** from **Start | All Programs | Microsoft SharePoint 2010 Products**.
+1. Open **SharePoint 2013 Products Central Administrator**.
 
 1. Create a new Site Collection. To do this, click **Create Site Collection** link under **Application Management** section within **Central Administration** page.
 
@@ -554,18 +401,21 @@ In this task, you will verify that the SharePoint Server was correctly configure
 	 
 	_Site’s Home Page_
 
-1. Once in the site click **Site Actions** | **Site Permissions** and click **Anonymous Access**.
+1. Once in the site click **Set up Site Permissions** link 
+
+1. In the Permissions ribbon, click **Anonymous Access**.
 
 1. Change settings to **Entire Web Site** and click **OK**.
+
 	![ConfigureAnonymous](Images/configureanonymous.png?raw=true)
 
 	_Configuring anonymous access_
 
-1. Now, test the SharePoint Farm connecting to the second SharePoint VM (_SPVM2_). To do this, go back to the **Windows Azure Portal** and go to **Virtual Machines** section.
+1. Now, test the SharePoint Farm connecting to the second SharePoint Virtual Machine ( _spvm2_ ). To do this, go back to the **Windows Azure Portal** and go to **Virtual Machines** section.
 
-1. Select the second SharePoint virtual machine (_SPVM2_) and click **Connect** to connect using **Remote Desktop Connection**.
+1. Select the second SharePoint virtual machine ( _spvm2_ ) and click **Connect** to connect using **Remote Desktop Connection**.
 
-1. Open **SharePoint 2010 Products Central Administrator** from **Start | All Programs | Microsoft SharePoint 2010 Products**.
+1. Open **SharePoint 2013 Products Central Administrator**.
 
 1. In the **Central Administration** page, click **Manage Web Applications** under **Application Management**.
 
@@ -576,7 +426,6 @@ In this task, you will verify that the SharePoint Server was correctly configure
 	![Extending Web Application](Images/extending-web-application.png?raw=true "Extending Web Application")
 
 	_Extending Web Application_
-
 
 1. Click **Application Management** in the left menu and then click **View all sites collections** link.
 
