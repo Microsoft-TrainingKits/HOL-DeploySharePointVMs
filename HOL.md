@@ -304,7 +304,7 @@ In this task, you will configure the SharePoint virtual machine to create and a 
 	 
 	_Web Application Management_ 
 
-1. In the **Create New Web Application** dialog box, make sure the **port** is set to _80_ and enable anonymous access. Click **Ok**. to create the web application.
+1. In the **Create New Web Application** dialog box, make sure the **port** is set to _80_ and enable Anonymous Access. Click **OK** to create the web application.
 
 	![New Web Application](Images/configure-sharepoint-new-web-application.png?raw=true)
 	 
@@ -312,7 +312,7 @@ In this task, you will configure the SharePoint virtual machine to create and a 
 
 1. Click **OK** once the Web Application is created.
 
-1. Click **Authentication Providers**, located in the **Web Applications** ribbon bar.
+1. Select the web application recently created and click **Authentication Providers**, located in the **Web Applications** ribbon bar.
 
 	![Authentication Providers](Images/authentication-providers.png?raw=true "Authentication Providers")
 
@@ -417,19 +417,11 @@ In this task, you will verify that the SharePoint Server was correctly configure
 
 1. Open **SharePoint 2013 Products Central Administrator**.
 
-1. In the **Central Administration** page, click **Manage Web Applications** under **Application Management**.
+1. Click in **Application Management** in the Central Administration page.
 
-1. In the **Web Application** page, select the web application and click **Extend**.
+1. Under **Site Collections** click **View all sites collections** link.
 
-1. In the **Extend Web Application to Another IIS Web Site** dialog, set the **Port** to _80_, and the **Host Header** to the service DNS (e.g. _yourservice.cloudapp.net_ ) Lastly, allow Anonymous access, and click **Ok**.
-
-	![Extending Web Application](Images/extending-web-application.png?raw=true "Extending Web Application")
-
-	_Extending Web Application_
-
-1. Click **Application Management** in the left menu and then click **View all sites collections** link.
-
-1. Select the site you created in the first SharePoint server (SPFWebApp), copy the site’s URL and paste it in an Internet Explorer browser. If the site is working properly, you will be able to log on and access to the same home page you accessed from the first SharePoint server.
+1. Select the site you created in the first SharePoint server (SPFWebApp), copy the site’s URL and paste it in an Internet Explorer browser inside the Virtual Machine. If the site is working properly, you will be able to log on and access to the same home page you accessed from the first SharePoint server.
 
 ---
 
