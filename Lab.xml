@@ -13,7 +13,7 @@
   <Document ConversionType="Html">.\HOL.md</Document>
   <!--<Setup ConversionType="Html">.\Source\Setup\Setup.docx</Setup>-->
   <Title>Deploying a SharePoint Farm with Windows Azure Virtual Machines</Title>
-  <Version>1.0.3</Version>
+  <Version>1.1.0</Version>
   <Source></Source>
   <DependencyChecker></DependencyChecker>
   <CustomProperties>
