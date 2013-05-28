@@ -131,7 +131,7 @@ You will now create the SharePoint Server disk image required to run this hands-
 Make sure you have this image created before starting with the lab.	
 
 <a name="Ex1Task1" />
-#### Task 1 - Create a Windows Server virtual machine from the Windows Azure portal ####
+#### Task 1 - Create a SharePoint virtual machine from an image using PowerShell####
 
 In this task, you will create a SharePoint virtual machine from an image using PowerShell and we will join it to the domain we created in Deploying Active Directory hands-on lab. You will later use this virtual machine to configure the SharePoint Farm.
 
@@ -270,7 +270,7 @@ In this task, you will configure the SharePoint virtual machine to create and a 
 	 
 		_Configuration Database Settings_
  
-1. In the **Specify Farm Security Settings** page, type a phrase that meets the minimun requirements and click **Next** to continue.
+1. In the **Specify Farm Security Settings** page, type a phrase that meets the minimum requirements and click **Next** to continue.
 
 	![Farm Security Settings](Images/farm-security-settings.png?raw=true)
 	 
@@ -379,7 +379,7 @@ In this task, you will verify that the SharePoint Server was correctly configure
 	 
 	_Create Site Collection_
  
-1. In the **Template Selection** section, switch to **Publishing** tab and select **Publishing Portal** template. Then complete the **Primary and Secondary Site Collection Administrators**, use _contoso\Administrator_.
+1. In the **Template Selection** section, switch to **Publishing** tab and select **Publishing Portal** template. Then complete the **Primary and Secondary Site Collection Administrators**, use _contoso\[User name]_ where UserName is the one you configured in Deploying Active Directory HOL.
 
 	![Create Site Collection(2)](Images/create-site-collection2.png?raw=true)
 	 
@@ -439,7 +439,7 @@ In this task, you will verify that the SharePoint Server was correctly configure
 
 		_Adding an endpoint_
 
-	1. In the **Specify endpoint details** page, enter _webport_ in the name field, select the **TCP** protocol, and enter _80_ in the public and private port fields. Finally, click the arrow to confirm the endpoint creation.
+	1. In the **Specify endpoint details** page, enter _webport_ in the name field, select the **TCP** protocol, and enter _80_ in the public and private port fields. Finally, click the check to confirm the endpoint creation.
 
 		![webendpoint](Images/webendpoint.png?raw=true)
 
@@ -453,7 +453,7 @@ In this task, you will verify that the SharePoint Server was correctly configure
 		
 		_Add load balancing endpoint wizard_
 
-	1. In the **Specify endpoint details** page, define the same settings as the previous endpoint. Enter a Name (e.g. webport) and a private port (e.g. 80). Click the arrow to create the load balancing endpoint.
+	1. In the **Specify endpoint details** page, define the same settings as the previous endpoint. Enter a Name (e.g. webport) and a private port (e.g. 80). Click the check to create the load balancing endpoint.
 
 		![Load balancing endpoint details](Images/load-balancing-endpoint-details.png?raw=true "Load balancing endpoint details")
 
