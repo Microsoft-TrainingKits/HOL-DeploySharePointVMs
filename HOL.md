@@ -115,8 +115,8 @@ In this task, you will log on to the Windows Azure Portal and download the publi
 
 This hands-on lab includes the following exercises:
 
-1. [Creating a SharePoint Image](#Exercise1)
-1. [Create a SharePoint Virtual Machine](#Exercise2)
+1. [Creating SharePoint Image](#Exercise1)
+1. [Configuring a SharePoint Virtual Machine](#Exercise2)
 1. [Configuring Load Balancing](#Exercise3)
  
 Estimated time to complete this lab: **50 minutes**.
@@ -240,7 +240,7 @@ In this task, you will configure the SharePoint virtual machine to create and a 
 
 1. In the **Virtual Machines** section, select the first SharePoint Virtual Machine ( _spvm1_ ) and click **Connect** to connect using **Remote Desktop**.
 
-1. Open the **SharePoint 2013 Products Configuration Wizard** .
+1. Open the **SharePoint 2013 Products Configuration Wizard**.
 
 1. In the **Welcome to SharePoint Products** screen click next.
 
@@ -340,7 +340,7 @@ In this task, you will configure the SharePoint virtual machine to  connect to t
 
 1. Go back to the **Windows Azure Portal** and go to **Virtual Machines** section.
 
-1. Select the second SharePoint virtual machine ( _spvm2_ ) and click **Connect** to connect using **Remote Desktop**.
+1. Select the second SharePoint virtual machine _(spvm2)_ and click **Connect** to connect using **Remote Desktop**.
 
 1. Open the **SharePoint 2013 Products Configuration Wizard**.
 
@@ -386,6 +386,7 @@ In this task, you will verify that the SharePoint Server was correctly configure
 	_Create Site Collection_
  
 1. Leave the **Quota Template** with the default value and click **OK** to create the new Site Collection.
+
 1. Once the Site Collection is ready, you will see a successfully created message. To test the site, click the URL shown.
 
 	![Site Collection Created](Images/site-collection-created.png?raw=true)
@@ -411,9 +412,9 @@ In this task, you will verify that the SharePoint Server was correctly configure
 
 	_Configuring anonymous access_
 
-1. Now, test the SharePoint Farm connecting to the second SharePoint Virtual Machine ( _spvm2_ ). To do this, go back to the **Windows Azure Portal** and go to **Virtual Machines** section.
+1. Now, test the SharePoint Farm connecting to the second SharePoint Virtual Machine _(spvm2)_. To do this, go back to the **Windows Azure Portal** and go to **Virtual Machines** section.
 
-1. Select the second SharePoint virtual machine ( _spvm2_ ) and click **Connect** to connect using **Remote Desktop Connection**.
+1. Select the second SharePoint virtual machine _(spvm2)_ and click **Connect** to connect using **Remote Desktop Connection**.
 
 1. Open **SharePoint 2013 Products Central Administrator**.
 
